@@ -185,6 +185,7 @@ def plotCoef(beta, norm, lambdau, df, dev, label, xvar, xlab, ylab, **options):
 
     # draw the figures
     #fig, ax1 = plt.subplots()    
+    plt.figure(figsize=(12, 12))
     fig = plt.gcf()
     ax1 = plt.gca()
     
@@ -209,7 +210,7 @@ def plotCoef(beta, norm, lambdau, df, dev, label, xvar, xlab, ylab, **options):
     prettydf = df[indat]
     prettydf[-1] = df[-1]        
     
-    ax2.set(XLim=[min(index), max(index)], XTicks = atdf, XTickLabels = prettydf)
+    ax2.set(xlim=[min(index), max(index)], xticks = atdf, xticklabels = prettydf)
     ax2.grid()
     ax1.yaxis.grid()
 
